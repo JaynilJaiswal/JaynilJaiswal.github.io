@@ -1,14 +1,20 @@
-function toggleDetails(id) {
-    var details = document.getElementById(id);
-    if (details.style.display === "none" || details.style.display === "") {
-        details.style.display = "block";
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Message sent!');
+        form.reset();
+    });
+});
+
+function toggleDescription(card) {
+    // Find the description element within the clicked card
+    var description = card.nextElementSibling;
+
+    // Toggle the visibility of the description
+    if (description.style.display === "block") {
+        description.style.display = "none";
     } else {
-        details.style.display = "none";
+        description.style.display = "block";
     }
 }
-
-// Add interactivity to form submission (optional)
-document.querySelector('form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    alert('Thank you for reaching out! I will get back to you soon.');
-});
