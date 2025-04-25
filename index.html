@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://gradio.huggingface.co/gradio-js/gradio-js-1.js"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -614,14 +615,14 @@
                 </div>
                 
                 <div class="relative">
-                    <iframe id="llm-iframe" src="https://huggingface.co/spaces/JaynilJaiswal/portfolio" allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking" sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"></iframe>
-                    
-                    <div class="absolute inset-0 flex items-center justify-center bg-gray-200 dark:bg-dark-600 rounded-lg" id="llm-loading">
+                    <iframe id="llm-iframe" src="https://jayniljaiswal-portfolio.hf.space" allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking" sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"></iframe>
+                    <!-- <gradio-app src="https://jayniljaiswal-portfolio.hf.space" id="my-gradio-app"></gradio-app> -->
+                    <!-- <div class="absolute inset-0 flex items-center justify-center bg-gray-200 dark:bg-dark-600 rounded-lg" id="llm-loading">
                         <div class="text-center">
                             <div class="w-16 h-16 border-4 border-primary-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
                             <p class="text-gray-700 dark:text-gray-300">Loading AI Search Engine...</p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -744,6 +745,8 @@
             </div>
         </div>
     </footer>
+
+    
 
     <script>
         // Dark mode toggle
