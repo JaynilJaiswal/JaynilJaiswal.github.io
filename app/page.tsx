@@ -12,6 +12,7 @@ import {
 import { 
   faGithub, faLinkedinIn, faMediumM, faTwitter, faHuggingFace 
 } from '@fortawesome/free-brands-svg-icons';
+import InlineAIChat from './components/InlineAIChat';
 
 // --- DATA SECTION: EASILY EDIT YOUR INFO HERE ---
 
@@ -498,18 +499,12 @@ export default function Home() {
             <div className="bg-white dark:bg-dark-700 rounded-xl shadow-lg p-6">
                 <div className="mb-8 text-center">
                     <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-                        Explore my AI-powered portfolio search engine — ask questions and discover my projects interactively using a Large Language Model.
+                        Explore my AI-powered portfolio search engine — ask questions and discover my projects interactively using my custom Serverless RAG Gateway.
                     </p>
                 </div>
                 
                 <div className="relative h-[600px] w-full">
-                    <iframe 
-                        id="llm-iframe" 
-                        src="https://jayniljaiswal.duckdns.org" 
-                        className="w-full h-full rounded-lg border-none"
-                        allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking" 
-                        sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-                    />
+                    <InlineAIChat />
                 </div>
             </div>
         </div>

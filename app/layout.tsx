@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import AIWidget from "./components/AIWidget";
 import "./globals.css";
 import { Providers } from "./providers";
 
@@ -22,9 +23,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        {/* 1. Inject the Widget CSS */}
+        <link rel="stylesheet" href="/styles.css" />
+      </head>
       <body className={`${inter.className} bg-gray-50 text-gray-800 dark:bg-dark-900 dark:text-gray-100 transition-colors duration-300`}>
         <Providers>
           {children}
+          {/* <AIWidget /> */}
         </Providers>
       </body>
     </html>
