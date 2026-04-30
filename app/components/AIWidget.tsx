@@ -2,6 +2,13 @@
 
 import Script from 'next/script';
 
+// Tell TypeScript that our custom class exists on the global Window object
+declare global {
+  interface Window {
+    PortfolioAIWidget: any;
+  }
+}
+
 export default function AIWidget() {
   return (
     <Script 
